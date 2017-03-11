@@ -5,6 +5,7 @@ This open-source library for marker clustering that has a beautiful 3D Pie chart
 
 - **Marker clustering** — display 3D pie chart for clustering
 
+
 <img src="http://imgh.us/1_4007.jpg" width="280">
 <img src="http://imgh.us/2_804.png" width="280">
 <img src="http://imgh.us/3_2414.jpg" width="280">
@@ -12,6 +13,8 @@ This open-source library for marker clustering that has a beautiful 3D Pie chart
 <img src="http://imgh.us/5_1948.jpg" width="280">
 <img src="http://imgh.us/6_1791.jpg" width="280">
 
-Please replace the Api key with your own in Manifest.xml.For more information, check out the [my website][my-website].
+
+<br/>
+Please replace the Api key with your own in Manifest.xml.For more information, check out [my website][my-website].
 
 [my-website]: http://www.aminyazdanpanah.com
