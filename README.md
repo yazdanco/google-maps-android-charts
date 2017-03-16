@@ -18,7 +18,7 @@ This open-source library for marker clustering that has a beautiful 3D Pie chart
 </ul>
 <br/>
 
-Please replace the Api key with your own in Manifest.xml. For more information, check out [my website][my-website].
+Please replace the Api key with your own in Manifest.xml. For more information, check out [my website][my-website]{:target="_blank"}.
 
-[my-website]: http://www.aminyazdanpanah.com {:target="_blank"}
+[my-website]: http://www.aminyazdanpanah.com 
 
