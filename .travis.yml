@@ -26,7 +26,9 @@ android:
     - extra-google-google_play_services
     # Support library
     - extra-android-support
-    - extra-google-android-maps-utils
+    - extra-google-android_maps_utils
+    -android_maps_utils
+    -android-maps-utils
     # Latest artifacts in local repository
     - extra-google-m2repository
     - extra-android-m2repository
