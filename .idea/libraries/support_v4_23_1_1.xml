@@ -1,8 +1,5 @@
 <component name="libraryTable">
   <library name="support-v4-23.1.1">
-    <ANNOTATIONS>
-      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/annotations.zip!/" />
-    </ANNOTATIONS>
     <CLASSES>
       <root url="jar://$USER_HOME$/.android/build-cache/b627c991617561ef04cbec51c17b1d44c69089f6/output/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.android/build-cache/b627c991617561ef04cbec51c17b1d44c69089f6/output/res" />
@@ -10,7 +7,7 @@
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://D:/SDK/extras/android/m2repository/com/android/support/support-v4/23.1.1/support-v4-23.1.1-sources.jar!/" />
+      <root url="jar://$USER_HOME$/AppData/Local/Android/sdk/extras/m2repository/com/android/support/support-v4/23.1.1/support-v4-23.1.1-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
