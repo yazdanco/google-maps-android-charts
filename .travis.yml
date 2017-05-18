@@ -6,7 +6,10 @@ env:
   global:
     - ANDROID_API_LEVEL=25
     - ANDROID_BUILD_TOOLS_VERSION=25.0.2
-    - ADB_INSTALL_TIMEOUT=8
+    - ANDROID_ABI=armeabi-v7a
+    - ANDROID_TAG=google_apis
+    - EMULATOR_API_LEVEL=25
+    - ADB_INSTALL_TIMEOUT=20
 
 android:
   components:
@@ -18,8 +21,11 @@ android:
     - extra-android-support
     - extra-google-m2repository
     - extra-android-m2repository
-    - sys-img-armeabi-v7a-android-23
-    - sys-img-armeabi-v7a-addon-google_apis-google-$ANDROID_API_LEVEL
+    - android-$EMULATOR_API_LEVEL
+    - addon-google_apis-google-$ANDROID_API_LEVEL
+    - addon-google_apis-google-$EMULATOR_API_LEVEL
+    - sys-img-armeabi-v7a-google_apis-$ANDROID_API_LEVEL
+    - sys-img-armeabi-v7a-google_apis-$EMULATOR_API_LEVEL
 
 
   licenses:
@@ -33,11 +39,9 @@ android:
     - echo -e "\n84831b9409646a918e30573bab4c9c91346d8abd" > "$ANDROID_HOME/licenses/android-sdk-preview-license"
 
 before_script:
-  - echo no | android create avd --force -n test -t "android-25" --abi $ANDROID_ABI
-  - emulator -avd test -no-skin -no-audio -no-window -gpu off &
+  - echo no | android create avd --force -n test -t "android-"$EMULATOR_API_LEVEL --abi $ANDROID_ABI --tag $ANDROID_TAG
+  - emulator -avd test -no-skin -no-audio -no-window &
   - android-wait-for-emulator
-  - adb devices
-  - adb shell input keyevent 82 &
 
 script:
   - ./gradlew build connectedCheck
