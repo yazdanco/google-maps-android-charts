@@ -54,7 +54,7 @@ public class MainActivity extends BaseDemoActivity implements ClusterManager.OnC
         private final IconGenerator mClusterIconGenerator = new IconGenerator(getApplicationContext());
         private final ImageView mClusterImageView;
 
-        public AssetRenderer() {
+        AssetRenderer() {
             super(getApplicationContext(), getMap(), mClusterManager);
 
             viewPieChart = new GetViewPieChart(MainActivity.this);

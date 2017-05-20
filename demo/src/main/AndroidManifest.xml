@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.aminyazdanpanah.piechartclustermarker"><uses-permission android:name="android.permission.INTERNET"/>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aminyazdanpanah.piechartclustermarker">
+
+
+    <!--Permissions-->
+    <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.MAPS_RECEIVE" />
-    <uses-permission
-        android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
-    <uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission
-        android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission
-        android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-    <uses-feature
-        android:glEsVersion="0x00020000"
-        android:required="true" />
+
+    <!--Application-->
     <application
         android:allowBackup="true"
         android:icon="@drawable/piechart"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:fullBackupContent="false">
+
+        <!--Activities-->
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,9 +29,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- To use the Google Maps Android API,
+        you must register your app project on the Google API
+        Console and get a Google API key which you can add to your app.
+        https://developers.google.com/maps/documentation/android-api/signup-->
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="YOUR_API_KEY" />
+
     </application>
+
 
 </manifest>
