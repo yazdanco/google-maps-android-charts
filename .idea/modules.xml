@@ -3,8 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/google-maps-3D-pie-chart-marker-clustering-java.iml" filepath="$PROJECT_DIR$/google-maps-3D-pie-chart-marker-clustering-java.iml" />
       <module fileurl="file://$PROJECT_DIR$/google-maps-3D-pie-chart-marker-clustering-java-1.iml" filepath="$PROJECT_DIR$/google-maps-3D-pie-chart-marker-clustering-java-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/google-maps-3D-pie-chart-marker-clustering-java-2.iml" filepath="$PROJECT_DIR$/google-maps-3D-pie-chart-marker-clustering-java-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
     </modules>
   </component>
