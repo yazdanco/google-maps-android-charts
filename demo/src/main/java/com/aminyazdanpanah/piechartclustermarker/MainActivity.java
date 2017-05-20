@@ -1,6 +1,6 @@
 /*
- * Created by Amin Yazdanpanah 2016
- * https://www.aminyazdanpanah.com
+ * Copyright by Amin Yazdanpanah 2016
+ * http://www.aminyazdanpanah.com
  */
 
 package com.aminyazdanpanah.piechartclustermarker;
@@ -26,9 +26,10 @@ import com.google.maps.android.clustering.ClusterManager;
 import com.google.maps.android.clustering.view.DefaultClusterRenderer;
 import com.google.maps.android.ui.IconGenerator;
 import com.aminyazdanpanah.piechartclustermarker.model.Asset;
+import com.aminyazdanpanah.piechart.PieChart;
+import com.aminyazdanpanah.piechart.GetViewPieChart;
 
 import java.lang.reflect.Field;
-import java.util.Arrays;
 import java.util.Random;
 
 
@@ -42,8 +43,8 @@ public class MainActivity extends BaseDemoActivity implements ClusterManager.OnC
     int semiActive;
     int inactive;
     int nonactive;
-    float values[], realValues[];
-    float total = 0;
+    float values[];
+    GetViewPieChart viewPieChart;
     private static final Drawable TRANSPARENT_DRAWABLE = new ColorDrawable(Color.TRANSPARENT);
 
     /**
@@ -56,9 +57,9 @@ public class MainActivity extends BaseDemoActivity implements ClusterManager.OnC
         public AssetRenderer() {
             super(getApplicationContext(), getMap(), mClusterManager);
 
-            View PieChart = getLayoutInflater().inflate(R.layout.piechart_cluster, null);
-            mClusterIconGenerator.setContentView(PieChart);
-            mClusterImageView = (ImageView) PieChart.findViewById(R.id.image);
+            viewPieChart = new GetViewPieChart(MainActivity.this);
+            mClusterIconGenerator.setContentView(viewPieChart);
+            mClusterImageView = (ImageView) viewPieChart.findViewById(R.id.image);
         }
 
         @Override
@@ -77,20 +78,18 @@ public class MainActivity extends BaseDemoActivity implements ClusterManager.OnC
             nonactive = 0;
             mClusterIconGenerator.setBackground(TRANSPARENT_DRAWABLE);
             for (Asset p : cluster.getItems()) {
-                if (p.marker == 2130837573) {
+                if (p.marker == 2130837587) {
                     active++;
-                } else if (p.marker == 2130837620) {
+                } else if (p.marker == 2130837625) {
                     semiActive++;
-                } else if (p.marker == 2130837619) {
+                } else if (p.marker == 2130837613) {
                     nonactive++;
                 } else {
                     inactive++;
                 }
             }
             values = new float[]{active, semiActive, nonactive, inactive};
-            realValues = Arrays.copyOf(values, values.length);
-            values = calculateData(values);
-            PieChart pieChart = new PieChart(values, realValues);
+            PieChart pieChart = new PieChart(values);
             mClusterImageView.setImageDrawable(pieChart);
             Bitmap icon = mClusterIconGenerator.makeIcon(cluster.getSize() + "");
             markerOptions.icon(BitmapDescriptorFactory.fromBitmap(icon)).anchor(.5f, .5f);
@@ -200,17 +199,6 @@ public class MainActivity extends BaseDemoActivity implements ClusterManager.OnC
         return -1;
     }
 
-    private float[] calculateData(float[] data) {
-        total = 0;
-        for (float aData : data) {
-            total += aData;
-        }
-        for (int i = 0; i < data.length; i++) {
-            data[i] = 360 * (data[i] / total);
-        }
-        return data;
-
-    }
 
     public void info(View v) {
         AlertDialog myQuittingDialogBox = new AlertDialog.Builder(this)

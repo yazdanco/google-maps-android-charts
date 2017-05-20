@@ -1,6 +1,6 @@
 /*
- * Created by Amin Yazdanpanah 2016
- * https://www.aminyazdanpanah.com
+ * Copyright by Amin Yazdanpanah 2016
+ * http://www.aminyazdanpanah.com
  */
 
 package com.aminyazdanpanah.piechartclustermarker;

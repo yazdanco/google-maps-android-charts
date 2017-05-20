@@ -30,7 +30,7 @@
         </activity>
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="Your_API_Key" />
+            android:value="YOUR_API_KEY" />
     </application>
 
 </manifest>
