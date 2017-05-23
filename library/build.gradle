@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.kt3k.coveralls'
 
 android {
     compileSdkVersion 25
@@ -18,6 +19,9 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        debug {
+            testCoverageEnabled true
+        }
     }
     lintOptions {
         abortOnError false
@@ -31,4 +35,12 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.+'
     testCompile 'junit:junit:4.12'
+}
+coveralls {
+    jacocoReportPath = "${buildDir}/reports/coverage/debug/report.xml"
+}
+
+tasks.coveralls {
+    dependsOn 'connectedAndroidTest'
+    onlyIf { System.env.'CI' }
 }

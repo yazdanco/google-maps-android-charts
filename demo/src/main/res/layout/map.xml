@@ -16,5 +16,13 @@
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
         android:onClick="info"/>
-
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/toggle"
+        android:background="@drawable/barchart"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="70dp"
+        android:onClick="toggle"/>
 </RelativeLayout>

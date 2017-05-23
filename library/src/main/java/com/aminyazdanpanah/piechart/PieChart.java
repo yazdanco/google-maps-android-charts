@@ -1,6 +1,17 @@
 /*
- * Copyright by Amin Yazdanpanah 2016
- * http://www.aminyazdanpanah.com
+ * Copyright 2016 Amin Yazdanpanah http://www.aminyazdanpanah.com.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 package com.aminyazdanpanah.piechart;
 
@@ -12,6 +23,7 @@ import android.graphics.ColorFilter;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
+import android.support.annotation.NonNull;
 import android.util.DisplayMetrics;
 
 import java.util.Arrays;
@@ -32,7 +44,7 @@ public class PieChart extends Drawable {
     }
 
     @Override
-    public void draw(Canvas canvas) {
+    public void draw(@NonNull Canvas canvas) {
         paint.setColor(Color.BLACK);
         paint.setShadowLayer(10.0f, 0.0f, 2.0f, 0xFF000000);
         paint.setStrokeWidth(100);
@@ -88,6 +100,7 @@ public class PieChart extends Drawable {
         float px = dp * (metrics.densityDpi / 160f);
         return Math.round(px);
     }
+
     private float[] calculateData(float[] data) {
         float total = 0;
         for (float aData : data) {
