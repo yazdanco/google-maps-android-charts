@@ -15,6 +15,8 @@ This open-source library for marker clustering that has a beautiful 3D Pie chart
 <video width="320" height="240" controls>
   <source src="https://github.com/aminyazdanpanah/google-maps-3D-pie-chart-marker-clustering-java/blob/master/doc/demo.mp4" type="video/mp4">
   Your browser does not support the video tag.
+  The videos is here:
+  https://github.com/aminyazdanpanah/google-maps-3D-pie-chart-marker-clustering-java/blob/master/doc/demo.mp4
 </video>
 
 Please replace the Api key with your own in Manifest.xml. For more information, check out [my website][my-website].
