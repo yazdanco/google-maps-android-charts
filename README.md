@@ -10,19 +10,13 @@ This open-source library for marker clustering that has a beautiful 3D Pie chart
 
 
 - **Marker clustering** — display 3D pie chart for clustering
-<ul>
-<li>
-<img src="http://imgh.us/photo_2017-05-20_17-17-27.jpg" width="280">
-<img src="http://imgh.us/photo_2017-05-20_17-17-36.jpg" width="280">
-<img src="http://imgh.us/photo_2017-05-20_17-17-31.jpg" width="280">
-</li>
-<li>
-<img src="http://imgh.us/photo_2017-05-20_17-17-34.jpg" width="280">
-<img src="http://imgh.us/5_1948.jpg" width="280">
-<img src="http://imgh.us/6_1791.jpg" width="280">
-</li>
-</ul>
-<br/>
+- **Marker clustering** — display bar chart clustering
+
+<video width="500" controls>
+  <source src="https://github.com/aminyazdanpanah/google-maps-3D-pie-chart-marker-clustering-java/blob/master/doc/demo.mp4
+" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 Please replace the Api key with your own in Manifest.xml. For more information, check out [my website][my-website].
 
