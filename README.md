@@ -2,6 +2,7 @@
 [![Build Status](https://travis-ci.org/aminyazdanpanah/google-maps-3D-pie-chart-marker-clustering-java.svg?branch=master)](https://travis-ci.org/aminyazdanpanah/google-maps-3D-pie-chart-marker-clustering-java)
 [![API](https://img.shields.io/badge/API-15%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=15)
 [![](https://jitpack.io/v/aminyazdanpanah/google-maps-3D-pie-chart-marker-clustering-java.svg)](https://jitpack.io/#aminyazdanpanah/google-maps-3D-pie-chart-marker-clustering-java)
+[![Coverage Status](https://coveralls.io/repos/github/aminyazdanpanah/google-maps-3D-pie-chart-marker-clustering-java/badge.svg?branch=master)](https://coveralls.io/github/aminyazdanpanah/google-maps-3D-pie-chart-marker-clustering-java?branch=master)
 
 # Google Maps Android 3D Pie Chart Marker Clustering Java.
 
