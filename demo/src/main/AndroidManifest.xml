@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.aminyazdanpanah.piechartclustermarker">
+    package="com.aminyazdanpanah.demo">
 
 
     <!--Permissions-->
@@ -22,7 +22,7 @@
         android:fullBackupContent="false">
 
         <!--Activities-->
-        <activity android:name=".DemoActivity">
+        <activity android:name=".ui.DemoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

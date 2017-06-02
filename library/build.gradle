@@ -23,10 +23,22 @@ android {
             testCoverageEnabled true
         }
     }
+    sourceSets {
+        main {
+            manifest.srcFile 'manifest/AndroidManifest.xml'
+            java.srcDirs = ['src']
+            res.srcDirs = ['res']
+        }
+
+        androidTest {
+            java.srcDirs = ['chartTests/src']
+        }
+    }
     lintOptions {
         abortOnError false
     }
 }
+task instrumentTest(dependsOn: connectedCheck)
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
