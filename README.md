@@ -18,7 +18,7 @@ This open-source library for marker clustering that has a beautiful 3D Pie chart
 ![Demo](/doc/demo.gif?raw=true "Demo")
 
 ## Installation
-Before build the demo, you should get an [API] [API] key and replace in [AndroidManifest.xml][manifest].After that clone it and build it.That's it! 
+Before build the demo, you should get an [API key][API] and replace in [AndroidManifest.xml][manifest].After that clone it and build it.That's it! 
 
 # Developed By
 
