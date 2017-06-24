@@ -7,7 +7,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/aminyazdanpanah/google-maps-3D-pie-chart-marker-clustering-java/badge.svg?branch=master)](https://coveralls.io/github/aminyazdanpanah/google-maps-3D-pie-chart-marker-clustering-java?branch=master)
 
 
-This open-source library for marker clustering that has a beautiful 3D Pie chart for clustering which can useful for statical region.
+This open-source library for marker clustering that has a beautiful 3D Pie chart for clustering which can useful for statistical regions.
 
 
 - **Display 3D pie chart for clustering**
@@ -18,11 +18,11 @@ This open-source library for marker clustering that has a beautiful 3D Pie chart
 ![Demo](/doc/demo.gif?raw=true "Demo")
 
 ## Installation
-Before build the demo, you should get an [API key][API] and replace in [AndroidManifest.xml][manifest].After that clone it and build it.That's it! 
+Before build the demo, you should get an [API key][API] and replace it in [AndroidManifest.xml][manifest].After that clone it and build it.That's it! 
 
 # Developed By
 
-* [Amin Yazdanpanah](http://www.aminyazdanpanah.com) 
+* [Amin Yazdanpanah](https://www.linkedin.com/in/aminyazdanpanah/) 
 
 
 # License
