@@ -1,4 +1,4 @@
-# Google Maps Android 3D Pie Chart Marker Clustering Java.
+# Google Maps Android 3D Pie Chart - Bar Chart Marker Clustering Java.
 
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Google%20Maps%20Android%203D%20Pie%20Chart-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/5748)
 [![Build Status](https://travis-ci.org/aminyazdanpanah/google-maps-3D-pie-chart-marker-clustering-java.svg?branch=master)](https://travis-ci.org/aminyazdanpanah/google-maps-3D-pie-chart-marker-clustering-java)
@@ -7,11 +7,11 @@
 [![Coverage Status](https://coveralls.io/repos/github/aminyazdanpanah/google-maps-3D-pie-chart-marker-clustering-java/badge.svg?branch=master)](https://coveralls.io/github/aminyazdanpanah/google-maps-3D-pie-chart-marker-clustering-java?branch=master)
 
 
-This open-source library for marker clustering that has a beautiful 3D Pie chart for clustering which can useful for statistical regions.
+This open-source library for marker clustering that has a beautiful 3D Pie chart and also bar chart for clustering which can useful for statistical regions.
 
 
 - **Display 3D pie chart for clustering**
-- **Display bar chart for clustering**
+- **Display Bar chart for clustering**
 
 ## Demo
 
