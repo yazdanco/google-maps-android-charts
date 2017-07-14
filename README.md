@@ -13,12 +13,32 @@ This open-source library for marker clustering that has a beautiful 3D Pie chart
 - **Display 3D pie chart for clustering**
 - **Display Bar chart for clustering**
 
-## Demo
-
 ![Demo](/doc/demo.gif?raw=true "Demo")
 
-## Installation
-Before build the demo, you should get an [API key][API] and replace it in [AndroidManifest.xml][manifest].After that clone it and build it.That's it! 
+
+### Usage
+
+First add jitpack to your projects build.gradle file
+
+```gradle
+allprojects {
+    repositories {
+        ...
+        maven { url "https://jitpack.io" }
+   	}
+}
+```
+
+Then add the dependency in modules build.gradle file
+
+```gradle
+dependencies {
+    compile 'com.github.aminyazdanpanah:google-maps-3D-pie-chart-marker-clustering-java:v1.2'
+}
+```
+
+## Installation Demo
+Before build the demo, you should get an [API key][API] and replace it in [AndroidManifest.xml][manifest]. 
 
 # Developed By
 
