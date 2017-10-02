@@ -5,7 +5,8 @@
 [![API](https://img.shields.io/badge/API-15%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=15)
 [![](https://jitpack.io/v/aminyazdanpanah/google-maps-3D-pie-chart-marker-clustering-java.svg)](https://jitpack.io/#aminyazdanpanah/google-maps-3D-pie-chart-marker-clustering-java)
 [![codebeat badge](https://codebeat.co/badges/96e44347-d1d9-41d1-9a3b-8651a810895f)](https://codebeat.co/projects/github-com-aminyazdanpanah-google-maps-3d-pie-chart-marker-clustering-java-master)
-
+[![Known Vulnerabilities](https://snyk.io/test/github/aminyazdanpanah/google-maps-3d-pie-chart-marker-clustering-java/badge.svg)](https://snyk.io/test/github/aminyazdanpanah/google-maps-3d-pie-chart-marker-clustering-java)
+[![BCH compliance](https://bettercodehub.com/edge/badge/aminyazdanpanah/google-maps-3D-pie-chart-marker-clustering-java?branch=master)](https://bettercodehub.com/)
 
 This open-source library for marker clustering that has a beautiful 3D Pie chart and also bar chart for clustering which can useful for statistical regions.
 
