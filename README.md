@@ -38,7 +38,7 @@ dependencies {
 }
 ```
 
-## Installation Demo
+## Installing Demo
 Before build the demo, you should get an [API key][API] and replace it in [AndroidManifest.xml][manifest]. 
 
 # Developed By
