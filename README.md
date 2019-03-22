@@ -45,7 +45,7 @@ This library uses the the name to calculate the values of charts. In face, the n
 Also you must set the names of markers and the colors you would like to render. The length of names array must be the same as length of colors array.
  ```java
  
-String[] markerIcon = {"red", "green", "blue", "yellow"};
+String[] names = {"Toyota", "Ford", "Honda", "Dodge"};
 int[] colors = {Color.RED, Color.GREEN, Color.BLUE, Color.YELLOW};
 
 ```
