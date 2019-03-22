@@ -21,6 +21,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.Paint;
+import android.graphics.PixelFormat;
 import android.graphics.drawable.Drawable;
 import android.util.DisplayMetrics;
 
@@ -71,7 +72,7 @@ public class BarChart extends Drawable {
 
     @Override
     public int getOpacity() {
-        return 0;
+        return PixelFormat.UNKNOWN;
     }
 
     private static float convertDpToPixel(float dp) {

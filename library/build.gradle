@@ -1,4 +1,14 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+publish {
+    userOrg = 'yazdanpanah'
+    groupId = 'com.aminyazdanpanah'
+    artifactId = 'google-maps-android-charts'
+    publishVersion = '1.3'
+    desc = 'A Google Maps Android library to render marker clusters as charts categorized on map with specified values.'
+    website = 'https://github.com/aminyazdanpanah/google-maps-android-charts'
+}
 
 android {
     compileSdkVersion 28

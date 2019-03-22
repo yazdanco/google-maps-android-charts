@@ -1,6 +1,7 @@
-# Google Maps Chart for Android
+# 🗺 Google Maps Chart for Android
 
 [![Build Status](https://travis-ci.org/aminyazdanpanah/google-maps-android-charts.svg?branch=master)](https://travis-ci.org/aminyazdanpanah/google-maps-android-charts)
+[![](https://jitpack.io/v/aminyazdanpanah/google-maps-android-charts.svg)](https://jitpack.io/#aminyazdanpanah/google-maps-android-charts)
 
 A Google Maps Android library to render marker clusters as charts categorized on map with specified values.
 Available Charts: [Pie Chart](#pie-chart), [Bar Chart](#bar-chart) and [Donut Chart](#donut-chart)
@@ -28,6 +29,11 @@ This library is a wrapper around "[Google Maps Android API utility library](http
 
 Before using this library, please read the "[Google Maps Android API utility library documentation](https://developers.google.com/maps/documentation/android-sdk/utility/)" .
 
+You can see the demo for more details.
+
+NOTE:
+  -Before Building the demo, you must [get an API key](https://developers.google.com/maps/documentation/android-sdk/signup) which you can then add to your demo app.
+
 ### Marker
 
 Firstly, you need to generate markers that have a name.
@@ -35,10 +41,23 @@ You must initialize `CMaker` class that is implemented `ClusterItem` and pass th
 
 ```java
 
-CMarker marker = new CMarker(new LatLng(), "Somthing", 12355468);
-marker.setTitle("somthing");
+CMarker marker = new CMarker(new LatLng(52.22222, 36.25622), "Ford", 12355468); //(Location of marker, specifed name, the drawable marker ID)
+marker.setTitle("somthing you want to display when you tap on marker");
 
+
+CMarker marker2 = new CMarker(new LatLng(52.25552, 36.25624), "Toyota", 12355469); //(Location of marker, specifed name, the drawable marker ID)
+marker.setTitle("somthing you want to display when you tap on marker");
+ 
+//...
 ```
+Add the marker to the `addItem()` method;
+
+```java
+clusterManager.addItem(marker);
+clusterManager.addItem(marker2);
+//...
+```
+
 ### Chart
 
 This library uses the the name to calculate the values of charts. In face, the number of  each slice of chart is sum of names.

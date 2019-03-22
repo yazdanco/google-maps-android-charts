@@ -23,6 +23,7 @@ import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.PixelFormat;
 import android.graphics.RadialGradient;
 import android.graphics.RectF;
 import android.graphics.Shader.TileMode;
@@ -132,7 +133,7 @@ public class DonutChart extends Drawable {
 
     @Override
     public int getOpacity() {
-        return 0;
+        return PixelFormat.UNKNOWN;
     }
 
     private void drawDonut(Canvas canvas, Paint paint, float start, float sweep) {

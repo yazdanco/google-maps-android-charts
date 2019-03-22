@@ -1,6 +1,6 @@
 language: android
 jdk: oraclejdk8
-# Use the Travis Container-Based Infrastructure
+
 sudo: false
 
 android:
@@ -14,4 +14,4 @@ android:
   - 'android-sdk-license-.+'
 
 script:
-- ./gradlew clean assembleDebug -x library:signArchives -PdisablePreDex
+- ./gradlew clean assembleDebug -PdisablePreDex
