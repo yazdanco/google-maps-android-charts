@@ -32,7 +32,8 @@ Before using this library, please read the "[Google Maps Android API utility lib
 You can see the demo for more details.
 
 NOTE:
-  -Before Building the demo, you must [get an API key](https://developers.google.com/maps/documentation/android-sdk/signup) which you can then add to your demo app.
+
+- Before Building the demo, you must [get an API key](https://developers.google.com/maps/documentation/android-sdk/signup) which you can then add to your demo app.
 
 ### Marker
 
