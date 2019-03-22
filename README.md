@@ -1,55 +1,106 @@
-# Google Maps Android 3D Pie Chart - Bar Chart Marker Clustering Java.
+# Google Maps Chart for Android
 
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Google%20Maps%20Android%203D%20Pie%20Chart-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/5748)
-[![Build Status](https://travis-ci.org/aminyazdanpanah/google-maps-3D-pie-chart-marker-clustering-java.svg?branch=master)](https://travis-ci.org/aminyazdanpanah/google-maps-3D-pie-chart-marker-clustering-java)
-[![API](https://img.shields.io/badge/API-15%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=15)
-[![](https://jitpack.io/v/aminyazdanpanah/google-maps-3D-pie-chart-marker-clustering-java.svg)](https://jitpack.io/#aminyazdanpanah/google-maps-3D-pie-chart-marker-clustering-java)
-[![codebeat badge](https://codebeat.co/badges/96e44347-d1d9-41d1-9a3b-8651a810895f)](https://codebeat.co/projects/github-com-aminyazdanpanah-google-maps-3d-pie-chart-marker-clustering-java-master)
-[![Known Vulnerabilities](https://snyk.io/test/github/aminyazdanpanah/google-maps-3d-pie-chart-marker-clustering-java/badge.svg)](https://snyk.io/test/github/aminyazdanpanah/google-maps-3d-pie-chart-marker-clustering-java)
-[![BCH compliance](https://bettercodehub.com/edge/badge/aminyazdanpanah/google-maps-3D-pie-chart-marker-clustering-java?branch=master)](https://bettercodehub.com/)
-[![Build Status](https://www.bitrise.io/app/2038295db52acff7/status.svg?token=H9fw_ujGCmzsXbNICx1D3A&branch=master)](https://www.bitrise.io/app/2038295db52acff7)
+[![Build Status](https://travis-ci.org/aminyazdanpanah/google-maps-android-charts.svg?branch=master)](https://travis-ci.org/aminyazdanpanah/google-maps-android-charts)
 
-This open-source library for marker clustering that has a beautiful 3D Pie chart and also bar chart for clustering which can useful for statistical regions.
+A Google Maps Android library to render marker clusters as charts categorized on map with specified values.
+Available Charts: [Pie Chart](#pie-chart), [Bar Chart](#bar-chart) and [Donut Chart](#donut-chart)
 
+![Demo](/docs/demo.gif?raw=true "Demo")
 
-- **Display 3D pie chart for clustering**
-- **Display Bar chart for clustering**
+## Installation
 
-![Demo](/doc/demo.gif?raw=true "Demo")
-
-
-### Usage
-
-First add jitpack to your projects build.gradle file
-
-```gradle
-allprojects {
-    repositories {
-        ...
-        maven { url "https://jitpack.io" }
-   	}
+1. Make sure you have JCenter in your repository list:
+```groovy
+repositories {
+    jcenter()
 }
 ```
-
-Then add the dependency in modules build.gradle file
-
-```gradle
+2. Add a dependency to your build.gradle:
+```groovy
 dependencies {
-    compile 'com.github.aminyazdanpanah:google-maps-3D-pie-chart-marker-clustering-java:v1.2'
+    compile ''
 }
 ```
 
-## Installing Demo
-Before build the demo, you should get an [API key][API] and replace it in [AndroidManifest.xml][manifest]. 
+## Usage
 
-# Developed By
+This library is a wrapper around "[Google Maps Android API utility library](https://github.com/googlemaps/android-maps-utils)". So you need to implement `com.google.maps.android:android-maps-utils:0.5+` and `com.google.android.gms:play-services-maps:16.1.0` in your build dependencies.
 
-* [Amin Yazdanpanah](https://www.linkedin.com/in/aminyazdanpanah/) 
+Before using this library, please read the "[Google Maps Android API utility library documentation](https://developers.google.com/maps/documentation/android-sdk/utility/)" .
+
+### Marker
+
+Firstly, you need to generate markers that have a name.
+You must initialize `CMaker` class that is implemented `ClusterItem` and pass the LarLng, the name of marker and the drawable Id. Also you can set the title and snippet of marker.
+
+```java
+
+CMarker marker = new CMarker(new LatLng(), "Somthing", 12355468);
+marker.setTitle("somthing");
+
+```
+### Chart
+
+This library uses the the name to calculate the values of charts. In face, the number of  each slice of chart is sum of names.
+Also you must set the names of markers and the colors you would like to render. The length of names array must be the same as length of colors array.
+ ```java
+ 
+String[] markerIcon = {"red", "green", "blue", "yellow"};
+int[] colors = {Color.RED, Color.GREEN, Color.BLUE, Color.YELLOW};
+
+```
+#### Pie Chart
+
+```java
+PieChartRenderer chart = new PieChartRenderer(getApplicationContext(), googleMap, clusterManager);
+chart.colors(colors);
+chart.names(names);
+```
+
+#### Bar Chart
 
 
-# License
+```java
+BarChartRenderer chart = new BarChartRenderer(getApplicationContext(), googleMap, clusterManager);
+chart.colors(colors);
+chart.names(names);
+```
 
-    Copyright 2017 Amin Yazdanpanah
+#### Donut Chart
+
+
+```java
+DonutChartRenderer chart = new DonutChartRenderer(getApplicationContext(), googleMap, clusterManager);
+chart.colors(colors);
+chart.names(names);
+```
+
+At the end, you must pass `chart` object to `setRenderer` method in `ClusterManager` class:
+
+```java
+clusterManager.setRenderer(chart);
+```
+
+## Contributing
+
+I'd love your help in improving, correcting, adding to the specification.
+Please [file an issue](https://github.com/aminyazdanpanah/google-maps-android-charts/issues)
+or [submit a pull request](https://github.com/aminyazdanpanah/google-maps-android-charts/pulls).
+
+Please see [Contributing File](https://github.com/aminyazdanpanah/google-maps-android-charts/blob/master/CONTRIBUTING.md) for more information.
+
+## Security
+
+If you discover a security vulnerability within this package, please send an e-mail to Amin Yazdanpanah via:
+contact [AT] aminyazdanpanah • com.
+
+## Credits
+
+- [Amin Yazdanpanah](http://www.aminyazdanpanah.com/?u=github.com/aminyazdanpanah/google-maps-android-charts)
+
+## License
+
+    Copyright 2019 Amin Yazdanpanah<www.aminyazdanpanah.com>
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -64,8 +115,3 @@ Before build the demo, you should get an [API key][API] and replace it in [Andro
     limitations under the License. 
 
 
-For more information, check out [my website][my-website].
-
-[my-website]: http://www.aminyazdanpanah.com 
-[manifest]: https://github.com/aminyazdanpanah/google-maps-3D-pie-chart-marker-clustering-java/blob/master/demo/src/main/AndroidManifest.xml#L39
-[API]:https://developers.google.com/maps/documentation/android-api/signup

@@ -8,21 +8,116 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:name="com.google.android.gms.maps.SupportMapFragment"/>
-    <Button
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@drawable/info"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
-        android:onClick="info"/>
-    <Button
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:id="@+id/toggle"
-        android:background="@drawable/barchart"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="70dp"
-        android:onClick="toggle"/>
+
+
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="#ABFFFFFF">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:id="@+id/table1"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="#FFFF0000" />
+
+            <TextView
+                android:textSize="14sp"
+                android:paddingLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/red" />
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:paddingLeft="5dp"
+                android:background="#FF00FF00"
+                android:paddingStart="5dp" />
+
+            <TextView
+                android:textSize="14sp"
+                android:paddingLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/green" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/table1">
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="#FF0000FF" />
+
+            <TextView
+                android:textSize="14sp"
+                android:paddingLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/blue" />
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:paddingLeft="5dp"
+                android:background="#FFFFFF00" />
+
+            <TextView
+                android:textSize="14sp"
+                android:paddingLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/yellow" />
+        </TableRow>
+    </TableLayout>
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="15dp" >
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:onClick="pieChart"
+            android:background="@drawable/pie_chart"/>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:onClick="barChart"
+            android:background="@drawable/bar_chart" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:onClick="donutChart"
+            android:background="@drawable/donut_chart"/>
+
+    </TableRow>
+
 </RelativeLayout>
