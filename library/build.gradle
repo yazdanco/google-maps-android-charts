@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.novoda.bintray-release'
 
 publish {
-    userOrg = 'yazdanpanah'
+    userOrg = 'aminyazdanpanah'
     groupId = 'com.aminyazdanpanah'
     artifactId = 'google-maps-android-charts'
     publishVersion = '1.3'

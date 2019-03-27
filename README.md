@@ -3,7 +3,8 @@
 [![Build Status](https://travis-ci.org/aminyazdanpanah/google-maps-android-charts.svg?branch=master)](https://travis-ci.org/aminyazdanpanah/google-maps-android-charts)
 [![](https://jitpack.io/v/aminyazdanpanah/google-maps-android-charts.svg)](https://jitpack.io/#aminyazdanpanah/google-maps-android-charts)
 
-A Google Maps Android library to render marker clusters as charts categorized on map with specified values.
+A Google Maps Android library to render marker clusters as charts categorized on the Google Maps Android with specified values.
+
 Available Charts: [Pie Chart](#pie-chart), [Bar Chart](#bar-chart) and [Donut Chart](#donut-chart)
 
 ![Demo](/docs/demo.gif?raw=true "Demo")
@@ -19,26 +20,23 @@ repositories {
 2. Add a dependency to your build.gradle:
 ```groovy
 dependencies {
-    compile ''
+    implementation 'com.aminyazdanpanah:google-maps-android-charts:1.3'
 }
 ```
 
 ## Usage
 
-This library is a wrapper around "[Google Maps Android API utility library](https://github.com/googlemaps/android-maps-utils)". So you need to implement `com.google.maps.android:android-maps-utils:0.5+` and `com.google.android.gms:play-services-maps:16.1.0` in your build dependencies.
+This library is a wrapper around "[Google Maps Android API utility library](https://github.com/googlemaps/android-maps-utils)" and renderer marker cluster as charts on th Google Maps. You need to implement `com.google.maps.android:android-maps-utils:0.5+` and `com.google.android.gms:play-services-maps:16.1.0` in your build.gradle dependencies.
 
-Before using this library, please read the "[Google Maps Android API utility library documentation](https://developers.google.com/maps/documentation/android-sdk/utility/)" .
+- **NOTE:** Before using this library, please read the "[Google Maps Android API utility library documentation](https://developers.google.com/maps/documentation/android-sdk/utility/)" .
 
-You can see the demo for more details.
+- **NOTE:** Before Building the demo, you must [get an API key](https://developers.google.com/maps/documentation/android-sdk/signup) which you can then add to your demo app.
 
-NOTE:
-
-- Before Building the demo, you must [get an API key](https://developers.google.com/maps/documentation/android-sdk/signup) which you can then add to your demo app.
 
 ### Marker
 
-Firstly, you need to generate markers that have a name.
-You must initialize `CMaker` class that is implemented `ClusterItem` and pass the LarLng, the name of marker and the drawable Id. Also you can set the title and snippet of marker.
+First, you need to generate markers that have a name.
+You must initialize `CMaker` class that is implemented by `ClusterItem` and pass the LarLng, the name of marker and the drawable Id. Also you can set the title and snippet of the marker.
 
 ```java
 
@@ -61,7 +59,7 @@ clusterManager.addItem(marker2);
 
 ### Chart
 
-This library uses the the name to calculate the values of charts. In face, the number of  each slice of chart is sum of names.
+This library uses the the name to calculate the values of charts. In face, the number of  each slice of chart is sum of marker's name.
 Also you must set the names of markers and the colors you would like to render. The length of names array must be the same as length of colors array.
  ```java
  
@@ -101,6 +99,18 @@ At the end, you must pass `chart` object to `setRenderer` method in `ClusterMana
 clusterManager.setRenderer(chart);
 ```
 
+### Customize Values
+
+You can customize the values of chart by extending `ChartRenderer` class and override the `values` method:
+
+```java
+class customPieChartRenderer extends PieChartRenderer {
+        @Override
+        float[] values(Cluster<CMarker> cluster){
+            // Return any value
+        }
+}
+```
 ## Contributing
 
 I'd love your help in improving, correcting, adding to the specification.
