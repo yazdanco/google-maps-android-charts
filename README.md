@@ -40,11 +40,11 @@ You must initialize `CMaker` class that is implemented by `ClusterItem` and pass
 
 ```java
 
-CMarker marker = new CMarker(new LatLng(52.22222, 36.25622), "Ford", 12355468); //(Location of marker, specifed name, the drawable marker ID)
+CMarker marker = new CMarker(new LatLng(52.22222, 36.25622), "Ford", R.drawable.marker_red); //(Location of marker, specifed name, the drawable marker ID)
 marker.setTitle("somthing you want to display when you tap on marker");
 
 
-CMarker marker2 = new CMarker(new LatLng(52.25552, 36.25624), "Toyota", 12355469); //(Location of marker, specifed name, the drawable marker ID)
+CMarker marker2 = new CMarker(new LatLng(52.25552, 36.25624), "Toyota", R.drawable.marker_green); //(Location of marker, specifed name, the drawable marker ID)
 marker.setTitle("somthing you want to display when you tap on marker");
  
 //...
